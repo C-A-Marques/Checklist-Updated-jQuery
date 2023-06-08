@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checklist App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="jquery-3.7.0.js"></script>
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="header">
+        <h1>Checklist app</h1>
+        <h2>Keep track of your daily tasks!</h2>
+    </div>
+
+    <div class="tutorial">
+        <div class="tutorialStart">
+            <h3>How does it work?</h3>
+            <button class="buttonStandard" id="toggleInstructions">Show/Hide Instructions</button>
+        </div>
+        <div id ="instructions">
+            <!--The tutorial will show here-->
+            <ul class="instructionsUL">
+                <li>Enter your task on the Tasks Input square</li>
+                <li>Press "Add Task" to add it on a List below</li>
+                <li>You can check your tasks as Completed by clicking on them</li>
+                <li>If you wish to delete a task from your List, press the "X" button at the end of it</li>
+                <li>You can also store your list with a Custom Name! After adding all of your tasks, enter a name on the List Name Input square and press the "Save List" button to keep it!</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="app">
+        <div class="divTask">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+        <button class="buttonStandard" id="addTaskBtn">Add Task</button>
+        </div>
+        <div class="divList">
+            <input type="text" id="listNameInput" placeholder="Enter a list name">
+            <button class="buttonStandard" id="saveListBtn">Save List</button>
+        </div>
+
+        <select id="sortOptions">
+            <option value="nameUp">Sort by Name (Ascending)</option>
+            <option value="nameDown">Sort by Name (Descending)</option>
+            <option value="dateUp">Sort by Date (Ascending)</option>
+            <option value="dateDown">Sort by Date (Descending)</option>
+          </select>
+        
+        <ul id="taskList">
+          <!-- Tasks will be added here -->
+        </ul>
+    
+        <div id="listsContainer">
+          <!-- Existing lists will be added here -->
+        </div>
+      </div>
+</body>
+</html>
